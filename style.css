@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.product-container{
+    background-color: papayawhip;
+    text-align: center;
+    padding: 1.5em;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.card-component{
+    width: min(500px, 100%);
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+/* 
+img{
+    max-width: 100%;
+}  */
+.img-container{
+    background-image: url('./images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    align-items: stretch;
+}
+.product-content{
+    padding: 1.5em;
+    text-align: left;
+}
+.heading{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+}
+p{
+    color: rgb(167, 161, 161);
+    font-size: 15px;
+}
+
+h2{
+    color: black;
+    font-size: 29px;
+    font-family: 'Fraunces', serif;
+    margin-block: 10px;
+}
+.price{
+    display: flex;
+}
+.price p{
+    margin-block: 10px;
+}
+.price p:first-child{
+    color: hsl(158, 36%, 37%);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+.price p:last-child{
+    font-size: 10px;
+    text-decoration: line-through;
+    padding: 1em;
+    color: hsl(228, 12%, 48%);
+}
+button{
+    border: none;
+    color: white;
+    outline: none;
+    background-color:  hsl(158, 36%, 37%);
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media  screen and (max-width:570px) {
+    .card-component{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .img-container{
+        background-image: url('./images/image-product-mobile.jpg');
+    }
+    
+}
